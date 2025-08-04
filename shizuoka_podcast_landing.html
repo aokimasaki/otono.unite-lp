@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>静岡で働こう。Podcast</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fb;
+        }
+        h1, h2, h3 {
+            margin: 0;
+            font-weight: bold;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            background-color: #ffffff;
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+        }
+        header img.hero {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        header h1 {
+            margin-top: 20px;
+            font-size: 2.4em;
+            color: #0a3d62;
+        }
+        header h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #0a3d62;
+        }
+        header p {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #555;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #0a3d62;
+            color: #ffffff;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 10px;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+        }
+        .intro {
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .intro h2 {
+            font-size: 1.8em;
+            color: #0a3d62;
+            margin-bottom: 20px;
+        }
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            font-size: 1em;
+        }
+
+        .episodes {
+            background-color: #f5f7fb;
+        }
+        .episodes h2 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #0a3d62;
+            margin-bottom: 40px;
+        }
+        .episode {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .episode h3 {
+            font-size: 1.2em;
+            color: #0a3d62;
+            margin: 0 0 10px;
+        }
+        .episode time {
+            font-size: 0.8em;
+            color: #666;
+        }
+        .episode p {
+            margin: 10px 0;
+        }
+        .episode a.listen {
+            display: inline-block;
+            margin-top: 10px;
+            color: #0a3d62;
+        }
+
+        .episodes .btn {
+            margin-top: 30px;
+        }
+
+        .listen-apps {
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .listen-apps h2 {
+            color: #0a3d62;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .listen-apps .apps {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .listen-apps .apps a {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            border: 1px solid #0a3d62;
+            border-radius: 4px;
+            color: #0a3d62;
+            font-weight: bold;
+        }
+
+        .cta {
+            background-color: #ffe171;
+            text-align: center;
+        }
+        .cta h2 {
+            color: #0a3d62;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .cta p {
+            margin: 0 auto 30px;
+            max-width: 700px;
+        }
+
+        .form-section {
+            background-color: #ffffff;
+        }
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        form textarea {
+            resize: vertical;
+        }
+        form button {
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: #0a3d62;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .cross-promo {
+            background-color: #0a3d62;
+            color: #ffffff;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+        .cross-promo .box {
+            background-color: #ffffff;
+            color: #0a3d62;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 350px;
+        }
+        .cross-promo .box h3 {
+            color: #0a3d62;
+            margin-top: 0;
+        }
+
+        footer {
+            background-color: #0a3d62;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Abstract hero image representing Mount Fuji at sunrise -->
+        <img src="623c6a63-bcb3-4154-851c-79cca0bba173.png" alt="Hero image" class="hero">
+        <h1>静岡で働こう。Podcast</h1>
+        <h2>聴いて、感じて、静岡市で働く魅力を発見しよう</h2>
+        <p>Apple Podcasts・Spotify等で配信中！</p>
+    </header>
+
+    <section class="intro">
+        <h2>静岡市×求人の企業紹介ポッドキャスト</h2>
+        <p>
+            温暖で自然豊かな静岡市。青い駿河湾や雄大な富士山に抱かれながら、さまざまな産業が息づいています。
+            この番組では、静岡市内の企業やお店の皆さまにご出演いただき、現場の声で仕事の楽しさややりがい、そして採用情報をお伝えします。<br>
+            求人情報を探している方も、静岡で働くイメージを膨らませたい方もぜひお聴きください。
+        </p>
+    </section>
+
+    <section class="episodes">
+        <h2>最新エピソード</h2>
+        <div class="episode">
+            <h3>第1回：株式会社Otono&nbsp;代表取締役&nbsp;青木真咲さん</h3>
+            <time datetime="2025-07-15">2025/07/15 • 25分</time>
+            <p>観光地向け音声ガイドの企画制作を手掛ける株式会社Otonoの代表取締役・青木真咲さんが登場。「おともたび」プロジェクトや地元清水三保での活動、音声ガイドへの思いについて熱く語っていただきました。</p>
+            <!-- Otono audio sample -->
+            <iframe class="otono-player" src="https://otono-voice.com/audio/766e6b31434087b9?locale=ja" width="100%" height="100" frameborder="no" allowfullscreen style="margin:15px 0"></iframe>
+        </div>
+        <div class="episode">
+            <h3>第2回：株式会社プラモワークス 鈴木さん</h3>
+            <time datetime="2025-06-30">2025/06/30 • 28分</time>
+            <p>世界的に有名なプラモデルメーカーである株式会社プラモワークスより鈴木さんがゲスト。ものづくりの醍醐味や、静岡が「模型の聖地」と呼ばれる理由、新卒・中途採用の募集職種についてお話しいただきました。</p>
+            <!-- sample audio player for this episode -->
+            <iframe class="otono-player" src="https://otono-voice.com/audio/766e6b31434087b9?locale=ja" width="100%" height="100" frameborder="no" allowfullscreen style="margin:15px 0"></iframe>
+        </div>
+        <div class="episode">
+            <h3>第3回：静岡市清水港 水産会社 山田さん</h3>
+            <time datetime="2025-06-10">2025/06/10 • 24分</time>
+            <p>清水港で新鮮な魚介を全国に届ける水産会社の山田さんをお迎えし、港町ならではの仕事のやりがいや、漁業の未来を担う若手の採用について伺います。</p>
+            <!-- sample audio player for this episode -->
+            <iframe class="otono-player" src="https://otono-voice.com/audio/766e6b31434087b9?locale=ja" width="100%" height="100" frameborder="no" allowfullscreen style="margin:15px 0"></iframe>
+        </div>
+        <div style="text-align:center;">
+            <a href="#" class="btn">すべてのエピソードを見る</a>
+        </div>
+    </section>
+
+    <section class="listen-apps">
+        <h2>お好きなアプリで聴く</h2>
+        <div class="apps">
+            <a href="#">Apple Podcasts</a>
+            <a href="#">Spotify</a>
+            <a href="#">Amazon Music</a>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Podcastであなたの会社をPRしませんか？</h2>
+        <p>静岡市内の企業様を対象に、番組への出演企業を募集しています。採用活動や企業PRにご活用ください。お気軽にお問い合わせください。</p>
+    </section>
+
+    <section class="form-section">
+        <form>
+            <label>会社名</label>
+            <input type="text" name="company" required>
+            <label>ご担当者のお名前</label>
+            <input type="text" name="contact_name" required>
+            <label>フリガナ</label>
+            <input type="text" name="furigana">
+            <label>郵便番号</label>
+            <input type="text" name="postal_code">
+            <label>ご住所</label>
+            <input type="text" name="address">
+            <label>電話番号</label>
+            <input type="text" name="phone">
+            <label>メールアドレス</label>
+            <input type="email" name="email" required>
+            <label>お問い合わせ内容</label>
+            <textarea name="message" rows="5"></textarea>
+            <button type="submit">送信する</button>
+        </form>
+    </section>
+
+    <section class="cross-promo">
+        <div class="box">
+            <h3>静岡ジョブマッチング</h3>
+            <p>静岡市内の求人情報サイト。簡単なアンケートに答えるだけで、あなたに合った企業ベスト５をご紹介します。</p>
+        </div>
+        <div class="box">
+            <h3>静岡ビジネスサポート窓口</h3>
+            <p>起業・創業・事業者の皆さま向けに、専門スタッフが総合的な相談に応じる窓口です。新しい挑戦の第一歩を応援します。</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>主催：静岡市<br>
+        運営：株式会社Otono<br>
+        〒420-0853 静岡県静岡市葵区追手町<br>
+        お問い合わせ： info@example.com</p>
+    </footer>
+</body>
+</html>
